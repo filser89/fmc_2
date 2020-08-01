@@ -1,9 +1,11 @@
 <!--pages/stories/stories.wxml-->
 
-
+<view><navigator url="#" bindtap="goToNew" class="btn btn-flat">Add dog</navigator></view>
   <view wx:for="{{dogs}}" wx:for-item="dog" wx:key="index">
     <view class="card-product">
-      <image bindtap="goToShow" data-id="{{dog.id}}" src="{{dog.image}}"></image>
+      <view>
+        <image bindtap="goToShow" data-id="{{dog.id}}" src="{{dog.image}}"></image>
+      </view>
       <view class="card-product-infos">
         <view class="h2">{{dog.name}}</view>
         <view class="p">{{dog.description}}</view>
@@ -12,5 +14,5 @@
       </view>
     </view>
   </view>
-<view><navigator url="#" bindtap="goToNew">Add dog</navigator></view>
+
 

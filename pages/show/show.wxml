@@ -1,3 +1,22 @@
 <!--pages/show/show.wxml-->
 <view>{{name}}</view>
 <view>{{description}}</view>
+<view class="comments-container">
+  <text>Comments</text>
+  <view wx:for="{{comments}}" wx:for-item="comment" wx:key="index">
+    <view class="comment-name">{{comment.name}}</view>
+    <view class="comment-content">{{comment.content}}</view>
+  </view>
+</view>
+<form bindsubmit="createNewComment" bindreset="formReset">
+ 
+  <view class="section"> 
+    <input name="name" placeholder="Title" />
+    <input name="content" placeholder="Share your oppion here" />
+    </view>
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+  </view>
+</form>
+<button bindtap="goToNew">Update a dog</button>
+<button bindtap="deleteDog">Delete a dog</button>

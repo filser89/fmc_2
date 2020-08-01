@@ -2,8 +2,9 @@
 <form bindsubmit="createNewDog" bindreset="formReset">
  
   <view class="section"> 
-    <input name="name" placeholder="What's the name" />
-    <input name="description" placeholder="What's the description" />
+    <input name="name" placeholder="What's the name" value="{{name}}" />
+    <input name="description" placeholder="What's the description" value="{{description}}" />
+    <input name="image" placeholder="image URL" value="{{image}}"/>
     </view>
   <view class="btn-area">
     <button form-type="submit">Submit</button>

@@ -8,11 +8,7 @@
   align-items: center;
 }
 
-.card-product image {
-  height: 100%;
-  width: 300rpx;
-  object-fit: cover;
-}
+
 
 .red-btn {
   background-color: red;
@@ -39,7 +35,7 @@
 }
 
 .card-product image {
-  width: 400rpx;
-  
-
+  height: 300rpx;
+  width: 300rpx;
+  object-fit: scale-down;
 }

@@ -12,7 +12,23 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    const page = this;
+    console.log(options)
+    if (options.id){
+      wx.request({
+        url: `http://localhost:3000/api/v1/dogs/${options.id}`,
+        method: "GET",
+        success(res) {
+          // what to do with the API data
+          // 1. save it to a local variable
+          // 2. set page's data with that local variable
+          const dog = res.data;
+          page.setData(dog)
+          console.log(page.Data)
+        }
+      })
+    }
+    
   },
 
   /**
@@ -65,19 +81,44 @@ Page({
   },
 
   createNewDog: function (e) {
-    
+    console.log(this.data)
     const dog = {}
     dog.name = e.detail.value.name
     dog.description = e.detail.value.description
-    dog.id = Math.floor(Math.random()*1000)
-    dog.clicked = ""
-    dog.btn = `I'm ${dog.name}`
-    dog.action = "turnRed"
-    dog.defAction = "turnRed"
+    dog.image = e.detail.value.image
+
+    if (this.data.id) {
+      dog.id = this.data.id
+      wx.request({
+        url: `http://localhost:3000/api/v1/dogs/${this.data.id}`,
+        method: "PUT",
+        data: dog,
+        success(res){
+          console.log(res)
+          wx.redirectTo({
+            url: '/pages/stories/stories'
+          })
+        }
+      })
+
+    } else{
+      wx.request({
+        url: 'http://localhost:3000/api/v1/dogs',
+        method: "POST",
+        data: dog,
+        success(res){
+          console.log(res)
+          wx.redirectTo({
+            url: '/pages/stories/stories'
+          })
+        }
+      })
+    }
+
     
-    getApp().globalData.dogs.push(dog)
-    wx.redirectTo({
-      url: '/pages/stories/stories'
-    })
+
+    
+    
+    
   }
 })
