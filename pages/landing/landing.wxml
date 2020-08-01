@@ -1,0 +1,10 @@
+<!--pages/landing/landing.wxml-->
+
+
+<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://picsum.photos/id/169/200/300?blur=2);">
+  <view class="container">
+    <view class="h1">This is an app to view dogs</view>
+    <view class="p">Go ahead and explore these amazing creatures</view>
+    <navigator bindtap="goToStoriesPage" url="" class="btn btn-flat">Get started </navigator>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+/**app.wxss**/
+.btn-flat {
+  color: white;
+  padding: 8px 24rpx
+  ;
+  border-radius: 4rpx
+  ;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}

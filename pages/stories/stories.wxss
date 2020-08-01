@@ -1,0 +1,45 @@
+/* pages/stories/stories.wxss */
+.card-product {
+  overflow: hidden;
+  height: 300rpx;
+  background: white;
+  box-shadow: 0 0 15rpx rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-product image {
+  height: 100%;
+  width: 300rpx;
+  object-fit: cover;
+}
+
+.red-btn {
+  background-color: red;
+}
+.yellow-btn {
+  background-color: yellow;
+}
+.card-product .h2 {
+  font-size: 45rpx;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product .p {
+  font-size: 28rpx;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 10rpx;
+  margin-top: 8rpx;
+}
+
+.card-product .card-product-infos {
+  padding: 16rpx;
+}
+
+.card-product image {
+  width: 400rpx;
+  
+
+}

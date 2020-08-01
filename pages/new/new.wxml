@@ -1,0 +1,11 @@
+<!--pages/new/new.wxml-->
+<form bindsubmit="createNewDog" bindreset="formReset">
+ 
+  <view class="section"> 
+    <input name="name" placeholder="What's the name" />
+    <input name="description" placeholder="What's the description" />
+    </view>
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+  </view>
+</form>

@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/landing/landing",
+    "pages/stories/stories",
+    "pages/new/new",
+    "pages/show/show",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/dogs/dogs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "FMC",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
